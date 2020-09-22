@@ -2,7 +2,7 @@
 layout: post
 title:  "Miklop Notes (src / GIT / container)"
 date:   2020-09-22 14:30:00 +0200
-categories: syslog
+categories: miklop
 ---
 # Miklop Notes (src / GIT / container)
 
