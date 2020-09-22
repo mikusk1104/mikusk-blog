@@ -62,10 +62,24 @@ RUN apk add --no-cache \
 
 COPY rsyslog.conf /etc/
 COPY miklop /etc/logrotate.d/
+COPY start_syslog_cron /usr/local/bin/start_syslog_cron
+
+RUN chmod +x /usr/local/bin/start_syslog_cron
+
 
 EXPOSE 514/udp
-CMD ["rsyslogd", "-n", "-f/etc/rsyslog.conf"]
+
+CMD /usr/local/bin/start_syslog_cron
+
 ```
+## start_syslog_cron
+```
+#!/bin/ash
+crond
+rsyslogd -n -f/etc/rsyslog.conf
+
+```
+
 ## build image
 ```
 docker build -t rsyslog-1 .
