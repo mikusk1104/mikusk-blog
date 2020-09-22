@@ -14,7 +14,7 @@ Ubuntu on WSL2
 ```
 
 ## GIT
-Remote already added: git remote add miklop https://github.com/mikusk1104/miklop
+Remote already added: git remote add miklop <https://github.com/mikusk1104/miklop>
 ```
 cd /home/mikusk/miklop
 git status
@@ -24,8 +24,8 @@ git push miklop master
 ```
 
 ## Container
-Source folder: /home/pi/miklop-image
-prepare src folder: git clone https://github.com/mikusk1104/miklop/
+Source folder: /home/pi/miklop-image<br/>
+Prepare src folder: git clone <https://github.com/mikusk1104/miklop/>
 
 **DockerFile**
 ```
