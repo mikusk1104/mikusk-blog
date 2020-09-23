@@ -13,11 +13,11 @@ categories: grafana
 <img src="{{ site.baseurl }}/assets/img/NumberOfDNSRequests.png">
 
 ## SQL code:
-```SQL
+```sql
 SELECT sum("value") FROM "router.k_DNS" WHERE $timeFilter GROUP BY time($interval) fill(linear)
 ```
 ## Panel JSON:
-```JSON
+```json
 {
   "aliasColors": {},
   "dashLength": 10,
