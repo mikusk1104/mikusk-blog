@@ -4,6 +4,10 @@ title:  "Grafana Notes"
 date:   2020-09-22 16:00:00 +0200
 categories: grafana
 ---
+
+[<img src="{{ site.baseurl }}/assets/img/DNSDashBoard.png">]({{ site.baseurl }}/assets/img/DNSDashBoard.png)
+
+
 # Number of DNS requests panel
 
 <img src="{{ site.baseurl }}/assets/img/NumberOfDNSRequests.png">
