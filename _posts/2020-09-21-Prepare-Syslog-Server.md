@@ -86,7 +86,7 @@ docker build -t rsyslog-1 .
 ```
 ## run image
 ```
-docker run -d --rm --name=rsyslog-1 -p 514:514/udp -v logs:/logs rsyslog-1
+docker run -d --rm --name=rsyslog-1 -p 514:514/udp -v miklop_logs:/logs rsyslog-1
 docker exec -it rsyslog-1 ./bin/ash
 
 ```
