@@ -82,11 +82,12 @@ rsyslogd -n -f/etc/rsyslog.conf
 
 ## build image
 ```
-docker build -t rsyslog-1 .
+git clone https://github.com/mikusk1104/miklop/
+docker build -t mikusk/miklop_rsyslog .
 ```
 ## run image
 ```
-docker run -d --rm --name=rsyslog-1 -p 514:514/udp -v miklop_logs:/logs rsyslog-1
+docker run -d --restart unless-stopped --name=miklop_rsyslog -p 514:514/udp -v miklop_logs:/logs mikusk/miklop_rsyslog
 docker exec -it rsyslog-1 ./bin/ash
 
 ```
