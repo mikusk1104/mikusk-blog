@@ -55,7 +55,7 @@ miklop_logs - /var/lib/docker/volumes/miklop_logs/_data
 
 **Start Container:**
 ```
-docker run -d --rm --log-driver json-file --log-opt max-size=10m --name=miklop-2 -v miklop_logs:/logs -v miklop_data:/data miklop-2
+docker run -d --restart unless-stopped --name=miklop -v miklop_logs:/logs -v miklop_data:/data miklop
 ```
 
 **Check Logs:**
