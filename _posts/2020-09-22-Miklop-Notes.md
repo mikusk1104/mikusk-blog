@@ -37,14 +37,14 @@ RUN pip install pytz
 RUN pip install tzlocal
 RUN pip install influxdb
 
-COPY miklop/src/ .
+COPY miklop/src_new/ .
 
-ENTRYPOINT ["python", "miklop.py", "-c", "/data/config.ini"]
+ENTRYPOINT ["python", "miklop_starter.py"]
 ```
 
 **Build image:**
 ```
-docker build -t miklop-2 .
+docker build -t miklop .
 ```
 
 **Volumes:**
@@ -56,10 +56,5 @@ miklop_logs - /var/lib/docker/volumes/miklop_logs/_data
 **Start Container:**
 ```
 docker run -d --restart unless-stopped --name=miklop -v miklop_logs:/logs -v miklop_data:/data miklop
-```
-
-**Check Logs:**
-```
-docker logs -f miklop-2
 ```
 
